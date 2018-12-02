@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <div>
+            <h1>Your previous transfers</h1>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>PLN</td>
+                    <td>AccountNumber</td>
+                    <td>Address</td>
+                    <td>City</td>
+                    <td>Title of the transfer</td>
+                </tr>
+                {% for item in data %}
+                <tr>
+                    <td>{{item['pln']}}.{{item['pln_c']}}</td>
+                    <td>{{item['AccountNumber']}}</td>
+                    <td>{{item['Address']}}</td>
+                    <td>{{item['City']}}</td>
+                    <td>{{item['TitleTransfer']}}</td>
+
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div>
+            <p></p>
+            <button onclick="location.href='/account';">go back</button>
+        </div>
+
+
+    </body>
+
+
+</html>

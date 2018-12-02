@@ -18,6 +18,7 @@ try:
                      City varchar(256) not null,
                      Address varchar(256) not null,
                      Password varchar(256) not null,
+                     Salt varchar(256) not null,
                      primary key (id)
                    )''')
 
@@ -36,8 +37,9 @@ try:
                      primary key (id)
                      
                    )''')
+                   
 
-    sql = "insert into users (FirstName, LastName, Email, UserName, City, Address, Password) values ('test', 'test', 'test', 'test', 'test', 'test', 'test')"
+    sql = "insert into users (FirstName, LastName, Email, UserName, City, Address, Password) values ('test', 'test', 'tagasak@outlook.com', 'test', 'test', 'test', 'test')"
     cursor.execute(sql)
     conn.commit()
     
